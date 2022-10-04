@@ -1,0 +1,35 @@
+div {
+    border-radius: 5px;
+    padding: 24px;
+}
+
+.text {
+    padding: 8px 24px;    
+    font-weight: 700;
+    font-style: inherit;
+}
+
+input[type=text] {
+    width: 32%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 10%;
+    background-color: #664caf;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #6545a0;
+  }
