@@ -1,30 +1,28 @@
-    let weight, height, bmi
+    const btn = document.querySelector("#btn");
+
+    btn.addEventListener("click", calculate);
 
     function calculate() {
-        weight = document.getElementById("weight").value;
-        height = document.getElementById("height").value;
-        bmi = document.getElementById("bmi");
-        bmi.innerHTML = "";
+        let weight = parseInt(document.querySelector("#weight").value);
+        let height = parseInt(document.querySelector("#height").value);
+        let result = document.querySelector("#result");
+        result.innerHTML = " ";
 
-        // weight.parseInt(weight);
-        // height.parseInt(height);
+        let bmi = weight / (height/100) ** 2;
+        bmi = bmi.toFixed(1);
 
-        bmi = weight / (height/100) ** 2
-        bmi = bmi.toFixed(1)
+        let description;
 
-        let description
-
-        if (bmi <= 18.5) {
-            description = 'Underweight';
-        } else if (bmi >= 18.5 && bmi <= 24.9) {
-            description = 'Normal weight';
+        if (bmi >= 30) {
+            description = 'Obesity';
         } else if (bmi >= 25 && bmi <= 29.9) {
             description = 'Overweight';
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            description = 'Normal weight';
         } else {
-            description = 'Obesity';
+            description = 'Underweight';
         }
 
         const response = `Your BMI is <strong>${bmi}</strong> which means You are <strong>${description}</strong>`;
-        bmi.innerHTML = response;
-
+        result.innerHTML = response;
     }

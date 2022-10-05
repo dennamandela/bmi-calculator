@@ -12,17 +12,15 @@
         <p>Enter your weight and height below to check your BMI results</p>
     </div>
     <div>
-
         <label for="body-weight">Put your weight in here (KG)</label>
         <input type="text" id="weight" name="weight" />
 
         <label for="height">And yout height in here (CM)</label>
         <input type="text" id="height" name="height" />
 
-        <button type="button" onclick="calculate()">Calculate BMI</button>
+        <button id="btn">Calculate BMI</button>
+        <div id="result"></div>
     </div>
-
-    <p id="bmi"></p>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
